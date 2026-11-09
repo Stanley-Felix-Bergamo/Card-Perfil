@@ -1,0 +1,109 @@
+:root {
+  --cor-primaria: #2563eb;
+  --cor-secundaria: #64748b;
+  --cor-texto: #1e293b;
+  --cor-fundo-card: #ffffff;
+  --cor-fundo-pagina: #f1f5f9;
+  --sombra-card:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.6);
+  --raio-borda: 12px;
+  --font-padrao: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--cor-fundo-pagina);
+  font-family: var(--font-padrao);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0px;
+  gap: 20px;
+}
+
+.container {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.perfil {
+  --card-bg: var(--cor-fundo-card);
+  --card-borda: 1px solid #e2e8f0;
+
+  background-color: var(--card-bg);
+  border: var(--card-borda);
+  border-radius: var(--raio-borda);
+  box-shadow: var(--sombra-card);
+  width: 200px;
+  padding: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.perfil:hover {
+  transform: translateY(-4px);
+}
+
+.perfil__avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--cor-primaria);
+  margin-bottom: 16px;
+}
+
+.perfil__nome {
+  font-size: 1.25rem;
+  color: var(--cor-texto);
+  margin: 0 0 8px 0;
+  font-weight: 700;
+}
+
+.perfil__bio {
+  font-size: 0.9rem;
+  color: var(--cor-secundaria);
+  margin: 0 0 20px 0;
+  line-height: 1.4;
+}
+
+.perfil__botao {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s ease;
+}
+
+.perfil__botao:hover {
+  background-color: #1d4ed8;
+}
+
+.perfil--vip {
+  --card-bg: #fffbeb;
+  --card-borda: 2px solid #f59e0b;
+}
+
+.perfil--vip .perfil__avatar {
+  border-color: #f59e0b;
+}
+
+.perfil--vip .perfil__botao {
+  background-color: #d97706;
+}
+
+.perfil--vip .perfil__botao:hover {
+  background-color: #b45309;
+}
